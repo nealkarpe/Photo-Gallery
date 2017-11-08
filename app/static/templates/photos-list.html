@@ -1,0 +1,52 @@
+        <p class="text-right">
+	<a href="/logout">Logout</a>
+    </p>
+
+
+<!--
+<style> 
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+-->
+
+<form>
+  <input type="text" name="search" class="searchtext" placeholder="Search username...">
+  <input type="button" value="Search" class="searchbutton">
+</form>
+
+
+<div class="panel panel-default">
+  <!--  <div class="list-group"> -->
+        {{#each photos}}
+           <!-- <div href="/photo/{{ id }}" class="list-group-item clearfix"> -->
+
+             <a href="photo/{{id}}"><img src="{{path}}" height=360 width=360 onmouseover="this.width='390'; this.height='390'" onmouseout="this.width='360'; this.height='360'"> </a>
+            &nbsp 
+            
+          <!--      <div class="btn btn-danger pull-right delete-photo" data-id="{{ id }}" style="margin-left: .5em">Delete</div> -->
+               
+         <!--   </div> -->
+
+        {{/each}}
+       <!-- </div> -->
+  <!--   </div> -->
+    <br><br>
+    <a href="photo/create" class="btn btn-primary">Add a photo</a>
+</div>

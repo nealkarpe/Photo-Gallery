@@ -1,0 +1,19 @@
+<form action="{{ formAction }}" method="post" enctype="multipart/form-data">
+    <p class="">
+        <a href="/">View all photos</a>
+    </p>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <input type="file" name="file" class="form-control" placeholder="Path">
+        </div>
+        <div class="panel-body">
+           
+           Public <input type="radio" name="private" value="public" class="form-control" placeholder="Privacy">
+           Private <input type="radio" name="private" value="private" class="form-control" placeholder="Privacy">
+        </div>
+        <div class="panel-footer text-right">
+           
+            <button type="submit" class="btn btn-success">Upload</button>
+        </div>
+    </div>
+</form>

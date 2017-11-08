@@ -1,0 +1,28 @@
+<div><img src="{{path}}" height=700 width=700>
+<br>
+<!--{{#each subscribers}}
+<p>user with id {{user_id}} liked this photo!</p> <br>
+{{/each}}-->
+
+<!--<p>
+{% for liker in likers %}
+    <p>{{liker}} liked this photo!</p><br>
+{% endfor %}
+</p>-->
+<p style="font-size:30px">Likers</p>
+<p style="font-size:20px">{{likers}} like this!</p>
+<br>
+<p style="font-size:30px">Dislikers</p>
+<p style="font-size:20px">{{dislikers}} dislike this!</p>
+<br>
+<br>
+
+<form>
+<textarea class="comtext" name="comstring" rows="3" cols="70" placeholder="Write a comment..."></textarea>
+<input type="button" class="combutton" value="Comment">
+</form>
+
+<div class="btn pull-right like-photo-1" data-id="{{ id }}" style="margin-left: .5em">Like</div>
+<div class="btn pull-right dislike-photo-1" data-id="{{ id }}" style="margin-left: .5em">Dislike</div>
+<a href="/"><div class="btn btn-danger pull-right delete-photo" data-id="{{ id }}" style="margin-left: .5em">Delete</div></a> 
+</div>
